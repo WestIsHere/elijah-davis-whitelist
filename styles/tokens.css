@@ -1,0 +1,52 @@
+/* ============================================================
+   TOKENS — identité graphique du dossier
+   Palette : encre profonde, laiton/or judiciaire, papier d'archive,
+   rouge de tampon. Typographie : serif élégante / sans lisible / mono.
+   ============================================================ */
+:root {
+  /* Fonds */
+  --bg: #0b0d12;
+  --bg-2: #10141b;
+  --surface: #141923;
+  --surface-2: #1a2130;
+
+  /* Accent laiton */
+  --gold: #c9a45c;
+  --gold-2: #e2c27a;
+  --gold-dim: rgba(201, 164, 92, 0.12);
+  --line: rgba(201, 164, 92, 0.16);
+  --line-strong: rgba(201, 164, 92, 0.42);
+
+  /* Papier d'archive (cartes « document ») */
+  --paper: #ece4d2;
+  --paper-2: #e3d9c3;
+  --paper-line: rgba(40, 30, 10, 0.16);
+  --ink: #16181d;
+  --ink-muted: #5f5b52;
+  --ink-gold: #7a5c22;
+
+  /* Tampon */
+  --red: #b3392f;
+  --red-dim: rgba(179, 57, 47, 0.1);
+
+  /* Texte */
+  --text: #e8e3d8;
+  --text-muted: #a7aab3;
+  --text-dim: #6f7481;
+
+  /* Typographie */
+  --font-display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Mesures */
+  --container: 1180px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --nav-h: 68px;
+  --radius: 14px;
+  --radius-sm: 8px;
+
+  /* Mouvement */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-open: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
