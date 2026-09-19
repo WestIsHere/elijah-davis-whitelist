@@ -33,7 +33,7 @@ export function renderHero({ meta, identity }) {
         <aside class="case-console reveal" data-tilt aria-label="Console de synthèse du dossier">
           <div class="case-console__scan" aria-hidden="true"></div>
           <div class="case-console__head">
-            <span class="mono-label">${icons.lock} Live case feed</span>
+            <span class="mono-label">${icons.lock} Case archive / intake</span>
             <span class="case-console__id">${esc(meta.fileNumber)}</span>
           </div>
 
@@ -53,18 +53,18 @@ export function renderHero({ meta, identity }) {
           </div>
 
           <dl class="case-console__stats">
-            <div><dt>Signal</dt><dd class="case-console__signal"><span></span>Stable</dd></div>
+            <div><dt>Dossier</dt><dd class="case-console__signal"><span></span>Actif</dd></div>
             <div><dt>Profil</dt><dd>01 / 08</dd></div>
             <div><dt>Accès</dt><dd>WL</dd></div>
           </dl>
 
           <div class="case-console__activity">
             <span class="case-console__status-dot" aria-hidden="true"></span>
-            <span class="case-console__activity-copy"><small>Activité du dossier</small><strong id="live-status">Dossier ouvert</strong></span>
-            <span class="case-console__time">LIVE</span>
+            <span class="case-console__activity-copy"><small>État du dossier</small><strong id="live-status">Consultation en cours</strong></span>
+            <span class="case-console__time">OPEN</span>
           </div>
           <div class="case-console__meter" aria-hidden="true"><span id="case-console-meter"></span></div>
-          <div class="case-console__foot"><span>ENCRYPTED // RP</span><span>SCANNING</span></div>
+          <div class="case-console__foot"><span>LOS SANTOS // RP</span><span>PRIVATE FILE</span></div>
         </aside>
       </div>
       <a class="hero__scroll" href="#identite" aria-label="Faire défiler vers la section Identité">

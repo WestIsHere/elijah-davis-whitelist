@@ -15,7 +15,7 @@ export function renderCover({ meta, identity }) {
         <span class="cover__stamp stamp">${esc(meta.coverStamp)}</span>
 
         <div class="cover__body">
-          <p class="cover__kicker mono-label">${icons.folder} Character file</p>
+          <p class="cover__kicker mono-label">${icons.folder} Los Santos / Character file</p>
           <h1 class="cover__name" id="cover-name">
             <span>${esc(identity.firstName)}</span>
             <span>${esc(identity.lastName)}</span>
@@ -36,7 +36,7 @@ export function renderCover({ meta, identity }) {
 
         <div class="cover__footer" aria-hidden="true">
           <span class="barcode"></span>
-          <span>Whitelist application</span>
+          <span>Private file · Whitelist application</span>
         </div>
       </div>
     </div>`;
