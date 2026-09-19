@@ -68,6 +68,7 @@ src/
     icons.js            icônes SVG inline (balance, dossier, document, marteau…)
     reveal.js           animations d'apparition (IntersectionObserver)
     scrollspy.js        lien actif, compteur « 03 / 08 », barre de progression
+    motion.js           halo de pointeur, tilt de la console et statut vivant
   components/
     cover.js            couverture + animation d'ouverture
     nav.js              navbar + menu mobile

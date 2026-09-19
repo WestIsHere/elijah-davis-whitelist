@@ -22,6 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  isolation: isolate;
 }
 
 body.is-locked,
@@ -35,9 +36,10 @@ body::before {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(1200px 700px at 8% -10%, rgba(201, 164, 92, 0.10), transparent 60%),
-    radial-gradient(900px 620px at 100% 100%, rgba(62, 90, 138, 0.14), transparent 60%),
-    linear-gradient(180deg, #0c0f15 0%, #0b0d12 100%);
+    radial-gradient(900px 600px at var(--pointer-x, 12%) var(--pointer-y, 2%), rgba(201, 164, 92, 0.13), transparent 64%),
+    radial-gradient(900px 620px at 100% 100%, rgba(62, 118, 156, 0.18), transparent 60%),
+    linear-gradient(180deg, #0a0e15 0%, #080a0f 100%);
+  animation: ambient-drift 18s ease-in-out infinite alternate;
 }
 body::after {
   content: "";
@@ -48,6 +50,24 @@ body::after {
   opacity: 0.045;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 180px 180px;
+  mix-blend-mode: screen;
+}
+
+#app,
+#footer-root { position: relative; }
+
+#app::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.34;
+  background-image:
+    linear-gradient(rgba(168, 216, 228, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 216, 228, 0.025) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: linear-gradient(180deg, black, transparent 32%, transparent 72%, black);
 }
 
 /* Typographie */
@@ -71,6 +91,18 @@ img, svg { display: block; max-width: 100%; }
 
 ::selection { background: rgba(201, 164, 92, 0.35); color: #fff; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 3px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* Utilitaires */
 .container {

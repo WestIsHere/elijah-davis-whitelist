@@ -6,6 +6,7 @@ import { character } from "./data/elijah.js";
 import { mount } from "./lib/dom.js";
 import { initReveal } from "./lib/reveal.js";
 import { initScrollspy } from "./lib/scrollspy.js";
+import { initMotion } from "./lib/motion.js";
 
 import { renderCover, initCover } from "./components/cover.js";
 import { renderNav, initNav } from "./components/nav.js";
@@ -70,6 +71,7 @@ const openFile = () => {
   document.body.classList.remove("is-locked");
   document.body.classList.add("file-open");
   initReveal(document);
+  initMotion(document);
   spy.update();
 };
 
